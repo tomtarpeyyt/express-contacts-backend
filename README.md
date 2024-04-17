@@ -1,6 +1,9 @@
 # express-contacts-backend
 backend in Express JS for a Contact APP, using [MongoDB](https://www.mongodb.com/) as the database using the [Mongoose](https://mongoosejs.com/) ORM and [ExpressJS](https://expressjs.com/) as the api platform.
 
+## Video
+- Part 1 [designing the application](https://youtu.be/eJ_xe15fKRg)
+
 ## Getting Started
 - clone this repository `git clone https://github.com/tomtarpeyyt/express-contacts-backend.git`
 - enter the directory `cd express-contacts-backend`
