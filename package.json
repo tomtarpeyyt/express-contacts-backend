@@ -1,0 +1,14 @@
+{
+  "name": "express-contacts-backend",
+  "version": "1.0.0",
+  "description": "backend in Express JS for a Contact APP, using [MongoDB](https://www.mongodb.com/) as the database using the [Mongoose](https://mongoosejs.com/) ORM and [ExpressJS](https://expressjs.com/) as the api platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "server": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
