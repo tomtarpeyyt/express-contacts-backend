@@ -48,3 +48,7 @@ backend in Express JS for a Contact APP, using [MongoDB](https://www.mongodb.com
 - (GET)/:id `contactController.getContactById()`
 - (PUT)/:id `contactController.updateContact()`
 - (DELETE)/:id `contactController.deleteContact()`
+
+
+## Testing with cUrl in windows
+- `curl.exe -X POST -H "Content-Type: application/json" -d '{\"username\": \"tom\", \"email\": \"tom@gmail.com\", \"password\": \"password123\"}' http://localhost:5000/api/users/register`
