@@ -52,3 +52,5 @@ backend in Express JS for a Contact APP, using [MongoDB](https://www.mongodb.com
 
 ## Testing with cUrl in windows
 - `curl.exe -X POST -H "Content-Type: application/json" -d '{\"username\": \"tom\", \"email\": \"tom@gmail.com\", \"password\": \"password123\"}' http://localhost:5000/api/users/register`
+- `curl.exe -X POST -H "Content-Type: application/json" -d '{\"email\": \"tom@gmail.com\", \"password\": \"password123\"}' http://localhost:5000/api/users/login`
+- ` curl.exe -X POST -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjIwOGNhNzhmNzJlNjFkM2VhMWMwNzkiLCJpYXQiOjE3MTM0NjE0MzAsImV4cCI6MTcxMzQ2NTAzMH0.Rd7xtZbUMzJ8nB4Ud0MGNVvk_cZKoWKNhsKJ1zFGwS0" -d '{ \"name\": \"Bob Jones\", \"email\": \"bob@gmail.com\", \"telephone\": \"0121233432323\", \"address\": \"123 this street\", \"category\": \"business\"}' http://localhost:5000/api/contacts`

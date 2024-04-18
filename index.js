@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const config = require('./config/config');
 const userRoutes = require('./src/routes/userRoutes');
+const contactRoutes = require('./src/routes/contactRoutes');
 
 
 const app = express();
@@ -19,6 +20,7 @@ mongoose.connect(config.dbUrl)
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
+app.use('/api/contacts', contactRoutes);
 
 app.get('/', (req, res) => {
     res.json('time2code!');
