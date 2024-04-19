@@ -7,5 +7,6 @@ router.use(authMiddleware);
 
 router.get('/', contactController.getAllContacts);
 router.post('/', contactController.createContact);
+router.get('/:id', contactController.getContactById);
 
 module.exports = router;
