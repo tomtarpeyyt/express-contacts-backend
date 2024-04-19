@@ -43,4 +43,27 @@ exports.getContactById = async (req, res) => {
     } catch (err) {
         res.status(500).json({ message: 'Internal server error' });
     }
-}
+};
+
+exports.updateContact = async (req, res) => {
+    try {
+        const { name, email, telephone, address, category } = req.body;
+
+        await Contact.findOneAndUpdate(
+            { _id: req.params.id, user: req.user._id },
+            { name, email, telephone, address, category }
+        );
+        res.status(200).json({ message: 'Contact updated successfully' });
+    } catch (err) {
+        res.status(500).json({ message: 'Internal server error' });
+    }
+};
+
+exports.deleteContact = async (req, res) => {
+    try {
+        await Contact.findOneAndDelete({ _id: req.params.id, user: req.user._id });
+        res.status(200).json({ message: 'Contact deleted successfully' });
+    } catch (err) {
+        res.status(500).json({ message: 'Internal server error' });
+    }
+};
