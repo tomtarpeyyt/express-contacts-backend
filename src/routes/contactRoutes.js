@@ -5,6 +5,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 router.use(authMiddleware);
 
+router.get('/', contactController.getAllContacts);
 router.post('/', contactController.createContact);
 
 module.exports = router;
