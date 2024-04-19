@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const config = require('./config/config');
 const userRoutes = require('./src/routes/userRoutes');
 const contactRoutes = require('./src/routes/contactRoutes');
+const cors = require('cors');
 
 
 const app = express();
@@ -17,6 +18,7 @@ mongoose.connect(config.dbUrl)
     console.error('Error connection to MongoDB', err);
 });
 
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
